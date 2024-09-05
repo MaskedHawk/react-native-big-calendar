@@ -62,6 +62,7 @@ const _HourGuideCell = ({
               u['border-b'],
               {
                 borderColor: theme.palette.gray['100'],
+                borderStyle: 'dashed',
                 height: 1,
               },
             ]}
