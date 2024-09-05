@@ -79,6 +79,7 @@ interface CalendarBodyProps<T extends ICalendarEventBase> {
   enableEnrichedEvents?: boolean
   eventsAreSorted?: boolean
   hourComponent?: HourRenderer
+  timeslots?: number
 }
 
 function _CalendarBody<T extends ICalendarEventBase>({
@@ -115,6 +116,7 @@ function _CalendarBody<T extends ICalendarEventBase>({
   enableEnrichedEvents = false,
   eventsAreSorted = false,
   hourComponent,
+  timeslots = 0,
 }: CalendarBodyProps<T>) {
   const scrollView = React.useRef<ScrollView>(null)
   const { now } = useNow(!hideNowIndicator)
@@ -327,6 +329,7 @@ function _CalendarBody<T extends ICalendarEventBase>({
                   index={index}
                   calendarCellStyle={calendarCellStyle}
                   calendarCellAccessibilityProps={calendarCellAccessibilityProps}
+                  timeslots={timeslots}
                 />
               ))}
               {_renderEvents(date)}

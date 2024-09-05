@@ -139,6 +139,7 @@ export interface CalendarProps<T extends ICalendarEventBase> {
   showAdjacentMonths?: boolean
   sortedMonthView?: boolean
   showVerticalScrollIndicator?: boolean
+  timeslots?: number
 }
 ```
 
@@ -205,6 +206,7 @@ export interface CalendarProps<T extends ICalendarEventBase> {
 | `weekNumberPrefix`                           | no       | `string`                                                          | Prefix for week number. For month mode, the prefix will be shown in header row.                                                                                                                                                                                                                                                                                                                                                                                   |
 | `maxVisibleEventCount`                       | no       | `number`                                                          | Maximum number of events to show in a cell in month view. If the number of events exceeds this value, the cell will show the `moreLabel`. Defaults to 3.                                                                                                                                                                                                                                                                                                          |
 | `hourComponent`                              | no       | `HourRenderer`                                                    | Custom hour renderer                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `timeslots`                                  | no       | `number`                                                          | Number of timeslots to render per Hour. Default to 0                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ## EventRenderer
 
